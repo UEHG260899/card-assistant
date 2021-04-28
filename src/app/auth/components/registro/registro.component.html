@@ -1,4 +1,4 @@
-<form class="form_contact" autocomplete="off">
+<form class="form_contact" autocomplete="off" [formGroup]="formularioRegistro" (ngSubmit)="guardar()">
     <div style="text-align: center;">
         <img src="../../../../assets/img/logo.png" alt="logo" width="100" height="100">
         <h2 class="title">Registro</h2>
@@ -6,22 +6,26 @@
 
     <div class="input-field">
         <label >Nombre</label>
-        <input type="text"  placeholder="Nombre">
+        <input formControlName="nombre" type="text"  placeholder="Nombre">
     </div>
     <div class="input-field">
         <label >Apellido Paterno</label>
-        <input type="text"  placeholder="Apellido Paterno">
+        <input formControlName="apPat" type="text"  placeholder="Apellido Paterno">
     </div>
     <div class="input-field">
         <label >Email</label>
-        <input type="email"  placeholder="Email">
+        <input formControlName="email" type="email"  placeholder="Email">
     </div>
     <div>
         <label >Contraseña</label>
-        <input type="password" placeholder="Contraseña">
+        <input formControlName="password" type="password" placeholder="Contraseña">
+    </div>
+    <div>
+        <label > Confirmar Contraseña</label>
+        <input formControlName="passwordC" type="password" placeholder="Contraseña">
     </div>
 
     <div style="text-align: center;">
-        <button class="btn">Registrarse</button>
+        <button class="btn" type="submit">Registrarse</button>
     </div>
 </form>
