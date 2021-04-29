@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidationsService } from '../../services/validations.service';
 import Swal from 'sweetalert2'
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,9 @@ export class LoginComponent {
   })
 
   constructor(private _fb: FormBuilder,
-              private _validationService: ValidationsService) { }
+              private _validationService: ValidationsService,
+              private _authService: AuthService,
+              private _router: Router) { }
 
 
   campoValido(campo : string){
@@ -41,7 +45,15 @@ export class LoginComponent {
       return;
     }
 
-    console.log(this.loginFormulario.value);
+    const {email, password} = this.loginFormulario.value;
+    this._authService.login(email, password)
+      .subscribe(valido => {
+        if(valido === true){
+          this._router.navigateByUrl('/dashboard');
+        }else{
+          Swal.fire('Error de autenticación', valido, 'error')
+        }
+      });
   }
 
 }
