@@ -27,5 +27,17 @@ export class ValidationsService {
       return null;
     }
   }
+
+  obtenerMensaje(errores: any): string{
+
+    if(errores.required){
+      return 'Este campo es obligatorio';
+    }else if (errores.pattern){
+      return 'El texto no coincide con el formato';
+    }else if(errores.noIguales){
+      return 'Las contraseñas no coinciden';
+    }
+    return '';
+  }
   
 }

@@ -27,7 +27,16 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  guardar(){
+  campoValido(campo : string): boolean{
+    return this.formularioRegistro.get(campo)!.invalid && this.formularioRegistro.get(campo)!.touched;
+  }
+
+  mensajeError(campo : string): string{
+    let errores = this.formularioRegistro.get(campo)?.errors;
+    return this._validationsService.obtenerMensaje(errores);
+  }
+
+  guardar(): void{
 
     if(this.formularioRegistro.valid){
       console.log(this.formularioRegistro.value);

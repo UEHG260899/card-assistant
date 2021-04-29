@@ -7,22 +7,27 @@
     <div class="input-field">
         <label >Nombre</label>
         <input formControlName="nombre" type="text"  placeholder="Nombre">
+        <span *ngIf="campoValido('nombre')" class="error-form">{{ mensajeError('nombre') }}</span>
     </div>
     <div class="input-field">
         <label >Apellido Paterno</label>
         <input formControlName="apPat" type="text"  placeholder="Apellido Paterno">
+        <span *ngIf="campoValido('apPat')" class="error-form">{{ mensajeError('apPat') }}</span>
     </div>
     <div class="input-field">
         <label >Email</label>
         <input formControlName="email" type="email"  placeholder="Email">
+        <span *ngIf="campoValido('email')" class="error-form">{{ mensajeError('email') }}</span>
     </div>
-    <div>
+    <div class="input-field">
         <label >Contraseña</label>
         <input formControlName="password" type="password" placeholder="Contraseña">
+        <span *ngIf="campoValido('password')" class="error-form">{{ mensajeError('password') }}</span>
     </div>
-    <div>
+    <div class="input-field">
         <label > Confirmar Contraseña</label>
         <input formControlName="passwordC" type="password" placeholder="Contraseña">
+        <span *ngIf="campoValido('passwordC')" class="error-form">{{ mensajeError('passwordC') }}</span>
     </div>
 
     <div style="text-align: center;">
