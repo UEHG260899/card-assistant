@@ -93,3 +93,13 @@ img.grayscale:hover {
     font-size: 35px;
     text-align: center;
 }
+
+@media (max-width: 920px){
+    .form-wrap{
+        flex-direction: column;
+    }
+
+    .contact-info, .form {
+        width: 100%;
+    }
+}

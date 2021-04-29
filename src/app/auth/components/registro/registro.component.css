@@ -9,7 +9,7 @@ form.form_contact h2{
       margin-bottom: 30px;
 }
   
-form.form_contact .user_info{
+form.form_contact{
     display: flex;
     flex-direction: column;
 }
