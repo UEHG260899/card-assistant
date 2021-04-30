@@ -1,0 +1,8 @@
+* {
+    color: white;
+}
+
+.contenido {
+    background-color: var(--surface-b);
+    height: 100vh;
+}
