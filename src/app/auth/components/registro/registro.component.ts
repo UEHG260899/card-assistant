@@ -59,7 +59,7 @@ export class RegistroComponent {
           if(resp === true){
             this._router.navigateByUrl('/dashboard');
           }else{
-            Swal.fire('Error de autenticación', resp, 'error');
+            Swal.fire('Error de autenticación', resp.error.msg, 'error');
           }
         })
 
