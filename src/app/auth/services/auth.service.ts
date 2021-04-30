@@ -36,6 +36,21 @@ export class AuthService {
               );
   }
 
+  registro(nombre: string, apPat: string, email: string, password: string){
+    const url: string = `${this._baseURL}/auth/new`;
+    const body = { nombre, apPat, email, password };
+    return this._http.post<AuthResponse>(url, body)
+          .pipe(
+            tap(resp => {
+              if(resp.ok){
+                localStorage.setItem('token', resp.token!);
+              }
+            }),
+            map(resp => resp.ok),
+            catchError(err => of(err.msg))
+          )
+  }
+
   validarToken(): Observable<boolean>{
     const url = `${this._baseURL}/auth/renew`;
     const headers = new HttpHeaders()
