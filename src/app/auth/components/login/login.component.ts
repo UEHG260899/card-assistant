@@ -51,7 +51,7 @@ export class LoginComponent {
         if(valido === true){
           this._router.navigateByUrl('/dashboard');
         }else{
-          Swal.fire('Error de autenticación', valido, 'error')
+          Swal.fire('Error de autenticación', valido.error.msg, 'error')
         }
       });
   }

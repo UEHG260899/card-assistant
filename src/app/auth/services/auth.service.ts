@@ -32,8 +32,23 @@ export class AuthService {
                   }
                 }),
                 map(resp => resp.ok),
-                catchError(err => of(err.errors.msg))
+                catchError(err => of(err))
               );
+  }
+
+  registro(nombre: string, apPat: string, email: string, password: string){
+    const url: string = `${this._baseURL}/auth/new`;
+    const body = { nombre, apPat, email, password };
+    return this._http.post<AuthResponse>(url, body)
+          .pipe(
+            tap(resp => {
+              if(resp.ok){
+                localStorage.setItem('token', resp.token!);
+              }
+            }),
+            map(resp => resp.ok),
+            catchError(err => of(err))
+          )
   }
 
   validarToken(): Observable<boolean>{

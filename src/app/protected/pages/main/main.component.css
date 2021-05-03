@@ -1,0 +1,12 @@
+* {
+    color: white;
+}
+
+.contenido {
+    background-color: var(--surface-b);
+    min-height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1;
+    justify-content: center;
+}

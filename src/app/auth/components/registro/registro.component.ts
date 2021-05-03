@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ValidationsService } from '../../services/validations.service';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2'
+
+
+import { AuthService } from '../../services/auth.service';
+import { ValidationsService } from '../../services/validations.service';
+
 
 @Component({
   selector: 'app-registro',
@@ -22,7 +27,9 @@ export class RegistroComponent {
 
 
   constructor(private _fb: FormBuilder,
-    private _validationsService: ValidationsService) { }
+    private _validationsService: ValidationsService,
+    private _authService: AuthService,
+    private _router: Router) { }
 
   campoValido(campo: string): boolean {
     return this.formularioRegistro.get(campo)!.invalid && this.formularioRegistro.get(campo)!.touched;
@@ -46,7 +53,15 @@ export class RegistroComponent {
       return;
     }
 
-    console.log(this.formularioRegistro.value);
+    const { nombre, apPat, email, password } = this.formularioRegistro.value;
+    this._authService.registro(nombre, apPat, email, password)
+        .subscribe(resp => {
+          if(resp === true){
+            this._router.navigateByUrl('/dashboard');
+          }else{
+            Swal.fire('Error de autenticación', resp.error.msg, 'error');
+          }
+        })
 
   }
 
