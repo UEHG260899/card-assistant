@@ -4,5 +4,9 @@
 
 .contenido {
     background-color: var(--surface-b);
-    height: 100vh;
+    min-height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1;
+    justify-content: center;
 }
