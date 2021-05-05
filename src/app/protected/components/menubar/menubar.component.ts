@@ -16,11 +16,11 @@ export class MenubarComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      { label: 'Inicio', icon: 'pi pi-fw pi-home' },
-      { label: 'Calendar', icon: 'pi pi-fw pi-calendar' },
-      { label: 'Edit', icon: 'pi pi-fw pi-pencil' },
-      { label: 'Documentation', icon: 'pi pi-fw pi-file' },
-      { label: 'Settings', icon: 'pi pi-fw pi-cog' }
+      { label: 'Inicio', icon: 'pi pi-fw pi-home', routerLink : "inicio" },
+      { label: 'Información General', icon: 'pi pi-fw pi-calendar', routerLink : "general" },
+      { label: 'Mis Tarjetas', icon: 'pi pi-fw pi-credit-card' },
+      { label: 'Recordatorios', icon: 'pi pi-fw pi-calendar' },
+      { label: 'Salir', icon: 'pi pi-fw pi-sign-out' }
     ];
   }
 
