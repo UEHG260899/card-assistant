@@ -4,9 +4,23 @@
 
 .contenido {
     background-color: var(--surface-b);
-    min-height: calc(100vh - 3rem);
+    min-height: calc(70vh - 3rem);
     display: flex;
     flex-direction: column;
     flex-basis: 1;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+@media screen and (max-width: 767px) {
+    .contenido{
+        min-height: calc(50vh - 3rem);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+
+}
+
+
