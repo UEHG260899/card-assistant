@@ -7,6 +7,9 @@ import { ProtectedRoutingModule } from './protected-routing.module';
 import { MainComponent } from './pages/main/main.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import { GeneralComponent } from './pages/general/general.component';
+import { GraficaDonaComponent } from './components/grafica-dona/grafica-dona.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -16,10 +19,13 @@ import { MenubarComponent } from './components/menubar/menubar.component';
   declarations: [
     MainComponent,
     InicioComponent,
-    MenubarComponent
+    GeneralComponent,
+    MenubarComponent,
+    GraficaDonaComponent
   ],
   imports: [
     CommonModule,
+    ChartsModule,
     ProtectedRoutingModule,
     PrimengModule
   ]

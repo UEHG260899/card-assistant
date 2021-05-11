@@ -1,6 +1,31 @@
 .contenedor {
-    width: 80%;
     margin: auto;
-    text-align: center;
+    font-weight: bold;
 }
+h1{
+    text-align:center;
+    font-size: 40px
+}
+h2{
+    text-align:justify;
+    font-size: 30px
 
+}
+.aux{
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .imgDis{
+        display: none;
+    }
+    .aux{
+        display: grid;
+    }
+
+}
+@media screen and (min-width: 767px) and (max-width: 992px){
+    .imgDismd{
+        display: none;
+    }
+
+}
