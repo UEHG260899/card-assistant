@@ -5,6 +5,7 @@
 .contenido {
     background-color: var(--surface-b);
     min-height: calc(70vh - 3rem);
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     flex-basis: 1;

@@ -1,23 +1,23 @@
-<div class="p-grid">
+<div class="p-grid div-contenido">
     <div class="p-col-12 p-md-6 p-lg-6">
         <p-card header="Datos Personales">
             <div class="p-grid">
                 <div class="p-col-12 p-lg-6">
                     <strong>Nombre:</strong>
                 </div>
-                <div class="p-col-12 p-lg-6 centrado">
+                <div class="p-col-12 p-lg-6 ">
                     <strong>{{ usuario.nombre }}</strong>
                 </div>
                 <div class="p-col-12 p-lg-6">
                     <strong>Email:</strong>
                 </div>
-                <div class="p-col-12 p-lg-6 centrado">
+                <div class="p-col-12 p-lg-6 ">
                     <strong>{{ usuario.email }}</strong>
                 </div>
                 <div class="p-col-12 p-lg-6">
                     <strong>Tarjetas registradas:</strong>
                 </div>
-                <div class="p-col-12 p-lg-6 centrado">
+                <div class="p-col-12 p-lg-6 ">
                     <strong>1</strong>
                 </div>
             </div>
@@ -29,27 +29,34 @@
                 <div class="p-col-12 p-lg-6">
                     <strong>Total de Gastos:</strong>
                 </div>
-                <div class="p-col-12 p-lg-6 centrado">
+                <div class="p-col-12 p-lg-6 ">
                     <strong>"gastos"</strong>
                 </div>
                 <div class="p-col-12 p-lg-6">
                     <strong>Último mes:</strong>
                 </div>
-                <div class="p-col-12 p-lg-6 centrado">
+                <div class="p-col-12 p-lg-6 ">
                     <strong>"gastos del ultimo mes"</strong>
                 </div>
                 <div class="p-col-12 p-lg-6">
                     <strong>Este mes:</strong>
                 </div>
-                <div class="p-col-12 p-lg-6 centrado">
+                <div class="p-col-12 p-lg-6 ">
                     <strong>"gastos del este mes"</strong>
                 </div>
             </div>
         </p-card>
     </div>
-    <div class="p-col-12 p-md-6 p-lg-12">
+    <div class="p-col-12">
         <p-card header="Distribución de Gastos">
-            Hola
+            <div class="p-grid">
+                <div class="p-col-12 p-md-6 p-lg-6">
+                    "Información referente a los gastos"
+                </div>
+                <div class="p-col-12 p-md-6 p-lg-6">
+                    <app-grafica-dona></app-grafica-dona>
+                </div>
+            </div>
         </p-card>
     </div>
 </div>
