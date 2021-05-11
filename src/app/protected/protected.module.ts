@@ -7,6 +7,7 @@ import { ProtectedRoutingModule } from './protected-routing.module';
 import { MainComponent } from './pages/main/main.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import { GeneralComponent } from './pages/general/general.component';
 
 
 
@@ -16,6 +17,7 @@ import { MenubarComponent } from './components/menubar/menubar.component';
   declarations: [
     MainComponent,
     InicioComponent,
+    GeneralComponent,
     MenubarComponent
   ],
   imports: [
