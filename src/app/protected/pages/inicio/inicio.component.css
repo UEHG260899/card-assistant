@@ -1,3 +1,6 @@
+* {
+    color: white;
+}
 .contenedor {
     margin: auto;
     font-weight: bold;
@@ -11,15 +14,30 @@ h2{
     font-size: 30px
 
 }
-.aux{
-    display: none;
+
+.contenido{
+    background-color: var(--surface-b);
+    min-height: calc(70vh - 3rem);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 @media screen and (max-width: 767px) {
     .imgDis{
         display: none;
     }
-    .aux{
-        display: grid;
+
+    .contenido{
+        min-height: calc(50vh - 3rem);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 }
