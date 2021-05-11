@@ -1,3 +1,27 @@
 .div-contenido {
-    width: 100%;
+    width: 98%;
+    margin-top: auto;
+}
+
+.contenido{
+    background-color: var(--surface-b);
+    min-height: calc(100vh - 3rem);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+    .contenido{
+        min-height: calc(50vh - 3rem);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
 }
