@@ -1,0 +1,138 @@
+
+
+
+body{
+	color: #111;
+	position: relative;
+	overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vertical-align{
+	position: relative;
+	top: 35%;
+	transform: translateY(-50%);
+}
+
+strong{
+	font-weight: 900;
+}
+
+p{
+	line-height: 24px;
+	font-weight: 300px;
+
+
+}
+section{
+	padding: 50px 0;
+}
+ hr{
+ 	 width: 140px;
+ 	 margin-top: 20px;
+     margin-bottom: 20px;
+     border: 0;
+     border-top: 2px solid #eee;
+     display: block;
+     unicode-bidi: isolate;
+     margin-block-start: 0.5em;
+     margin-block-end: 0.5em;
+     margin-inline-start: auto;
+     margin-inline-end: auto;
+     overflow: hidden;
+ }
+
+ .text-center {
+    text-align: center;
+}
+ 
+ .section-heading{
+ 	color:#262626;
+ }
+
+ .section-heading h3{
+ 	font-weight: 300;
+ 	Letter-spacing: 3px;
+ }
+
+ .section-heading hr{
+ 	border-color: #262626;
+ 	margin-top: 30px;
+ 	margin-bottom: 40px;
+ }
+#about{
+
+    background: url("http://www.goodwp.com/images/201103/goodwp.com_16835.jpg")fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 500px;
+    
+    }
+    
+    #about h3{
+        font-weight: 300;
+        letter-spacing: 3px;
+    }
+    
+    #about h4{
+        font-weight: 300;
+        padding: 0 20%;
+        text-align: justify;
+    }
+    .service-item{
+
+        margin-bottom: 40px;
+        
+        }
+        
+        .service-item i{
+        
+         font-size: 48px;
+         color: #184d8a;
+         float: left;
+         border-right: 1px solid #184d8a;
+         padding-right: 15px;
+        
+        }
+        
+        .service-title{
+        margin-top: -25px;
+        margin-left: 15px;
+        display: inline-block;
+        
+        }
+        
+        .service-title h3{
+        
+            color: #111;
+            font-weight: 900;
+        }
+        
+        .service-title h4{
+        
+            font-weight: 300;
+            color: #000000;
+            margin-top: -5px;
+        }
+        
+        @media (max-height: 1170px){
+
+            .service-item i{
+                float: none;
+                border: none;
+                display: block;
+            
+            }
+            
+            .service-item{
+                text-align: center;
+            }
+            
+            .service-title{
+                margin-top: 0;
+                margin-left: 0
+            }
+
+        }
